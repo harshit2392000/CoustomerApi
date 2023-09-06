@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assigment</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    @media (min-width: 576px) {
+      .jumbotron {
+        padding: 1rem 2rem;
+      }
+    }
+
+    .errdiv {
+      color: red;
+      font-weight: bold;
+    }
+
+    label {
+      margin-bottom: 0;
+    }
+
+    .tdaction {
+      width: 15%;
+    }
+
+    .tdSr {
+      width: 7%;
+    }
+
+    .jumbotron {
+      margin-bottom: 0.5rem;
+    }
+
+    strong {
+      font-size: 24px !important;
+    }
+
+    input.largerCheckbox {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center bg-info text-white">
+          <h2>Welcome To Customer DataBase</h2>
+          <h4>This Page is created by Harshit </h4>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-right">
+            <input type="button" id="btnAdd" class="btn btn-primary para" value="Add New" />
+          </div>
+        </div>
+    
+        <div class="row pt-3">
+          <div class="col-md-12 col-sm-12 col-12 p-2 ">
+            <table id="tblData" class="table table-bordered table-hover table-striped">
+              <thead>
+                <tr>
+                  <th class="text-center"></th>
+                  <th class="text-center">First Name</th>
+                  <th class="text-center">Last Name</th>
+                  <th class="text-center">Address</th>
+                  <th class="text-center">City</th>
+                  <th class="text-center">State</th>
+                  <th class="text-center">Email</th>
+                  <th class="text-center">Phone</th>
+                  <th class="text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+    <script>
+    var emptyRow = "<tr><td colspan='9' class='text-center'> No Records Available</td></tr>";
+    var emptyNewRow = "<tr class='trNewRow'>";
+    emptyNewRow = emptyNewRow + "    <td class='tdFName'>";
+    emptyNewRow = emptyNewRow + "        <input type='text' class='form-control txtFName' placeholder='First Name'/>";
+    emptyNewRow = emptyNewRow + "    </td>";
+    emptyNewRow = emptyNewRow + "    <td class='tdLName'>";
+    emptyNewRow = emptyNewRow + "        <input type='text' class='form-control txtLName' placeholder='Last Name'/>";
+    emptyNewRow = emptyNewRow + "    </td>";
+    emptyNewRow = emptyNewRow + "    <td class='tdAdd'>";
+    emptyNewRow = emptyNewRow + "        <input type='text' class='form-control txtAdd' placeholder='Address'/>";
+    emptyNewRow = emptyNewRow + "    </td>";
+    emptyNewRow = emptyNewRow + "    <td class='tdCity'>";
+    emptyNewRow = emptyNewRow + "        <input type='text' class='form-control txtCity' placeholder='City'/>";
+    emptyNewRow = emptyNewRow + "    </td>";
+    emptyNewRow = emptyNewRow + "    <td class='tdState'>";
+    emptyNewRow = emptyNewRow + "        <input type='text' class='form-control txtState' placeholder='State'/>";
+    emptyNewRow = emptyNewRow + "    </td>";
+    emptyNewRow = emptyNewRow + "    <td class='tdEmail'>";
+    emptyNewRow = emptyNewRow + "        <input type='text' class='form-control txtEmail' placeholder='Email'/>";
+    emptyNewRow = emptyNewRow + "    </td>";
+    emptyNewRow = emptyNewRow + "    <td class='tdPhone'>";
+    emptyNewRow = emptyNewRow + "        <input type='text' class='form-control txtPhone' placeholder='Phone'/>";
+    emptyNewRow = emptyNewRow + "    </td>";
+    emptyNewRow = emptyNewRow + "    <td class='tdAction'>";
+    emptyNewRow = emptyNewRow + "        <button class='btn btn-sm btn-success btn-save'> Save</button>";
+    emptyNewRow = emptyNewRow + "        <button class='btn btn-sm btn-success btn-cancel'> Cancel</button>";
+    emptyNewRow = emptyNewRow + "    </td>";
+    emptyNewRow = emptyNewRow + "</tr>";
+
+    var rowButtons = "<button class='btn btn-success btn-sm btn-edit' > Edit </button>  <button class='btn btn-danger btn-sm  btn-delete' > Delete </button> ";
+    var rowUpdateButtons = "<button class='btn btn-success btn-sm btn-update' > Update </button>  <button class='btn btn-danger btn-sm  btn-cancell' > Cancel </button> ";
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
